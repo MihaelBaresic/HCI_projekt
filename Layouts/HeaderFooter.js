@@ -1,4 +1,5 @@
 import Header from '../components/header.js';
+
 // import Footer from '../components/Footer.js';
 
 const HeaderFooter = ({ children, ...rest }) => {

@@ -23,13 +23,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import CTA from '../components/CTA.js';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
-// import MailIcon from '@mui/icons-material/Mail';
-// import HomeIcon from '@mui/icons-material/Home';
-// import { Fullscreen } from '@mui/icons-material';
-// import { makeStyles } from '@material-ui/core/styles';
-// import MaterialTable, { MTableToolbar } from 'material-table';
-
 
 const drawerWidth = '80%';
 
@@ -101,9 +94,7 @@ export default function Home() {
 
   return ( 
     <>
-    <div className={styles.container}>
-
-
+    <div  className={`${styles.container} ${styles.header_height}`}>
  
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
@@ -213,11 +204,12 @@ export default function Home() {
               <div className={styles.intro_text}>
                 <h2>Feel The Flavours Of Dalmatia</h2>
                 <p>Try the taste of Dalmatian spiza from our web shop. Guaranteed high quality of all products. See you.</p>
+                <div className={`${styles.cta__full} ${styles.btn_header_pos}`}>FIND OUT MORE</div>
               </div>
               </div>
             </div>
           
-       <div className={styles.cta__full}>FIND OUT MORE</div>
+       
 
       </div>
 
@@ -248,11 +240,7 @@ export default function Home() {
     </div>
 
 
-    <CTA />
+    {/* <CTA /> */}
     </>
   )
 }
-
-
-
-

@@ -1,18 +1,40 @@
 import styles from '../styles/Home.module.css'
+import { Fade,Bounce,Flip } from "react-awesome-reveal";
+import React from 'react';
 
+//This is for button translate on hover
+// function reveal() {
+//   var reveals = document.querySelectorAll(".reveal");
+
+//   for (var i = 0; i < reveals.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var elementTop = reveals[i].getBoundingClientRect().top;
+//     var elementVisible = 150;
+
+//     if (elementTop < windowHeight - elementVisible) {
+//       reveals[i].classList.add("active");
+//     } else {
+//       reveals[i].classList.remove("active");
+//     }
+//   }
+// }
+
+// window.addEventListener("scroll", reveal);
 
 
 const CTA = () => (
-  <section className={styles.second_section_holder}>
+  <section className={styles.second_section_holder }>
     <div className={styles.bg_post_wood_img}>
      <img className={styles.wood_bg_img} src="/woodbg.webp" height='100%' width='100%'/> 
     </div>
-
+    
     <div className={`${styles.container_left} ${styles.container_section2_bg_pos}`} >
       <div className={styles.grid}>
         <div className={styles.grid_prsuto_text_holder}>
-        <h1>Provjerena domaća proizvodnja</h1>
-        <p>Mi brinemo da su naši proizvodi uzgajani i prešani na društveno i ekološki najodgovorniji način.</p>       
+        <Fade left >
+        <h1 className={styles.titile_txt}>Verified domestic production</h1>
+        <p className={styles.titile_paragraph_txt}>We care that our products are grown and made in the most socially and ecologically responsible way.</p>       
+        </Fade>
         </div>
         <div className={styles.grid_prsuto}>
         <div className={styles.prsuto_img_holder}>
@@ -26,7 +48,9 @@ const CTA = () => (
       </div>
       </div>
 
-
+      
+         
+ 
      
   </section>
 

@@ -1,11 +1,60 @@
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+// import { FaInstagram } from "react-icons/fa";
+// import { FaFacebook } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
+// import { FaYoutube } from "react-icons/fa";
+import styles from '../styles/Home.module.css'
 
 const Footer = () => (
-    <>
-			<div className="bg-black-50 h-1/2 w-full grid min-[900px]:grid-cols-4 md:grid-cols-2 min-[520px]:grid-cols-2 min-[520px]:text-left py-20 px-10 justify-center text-centar">
+<>
+	<section className={styles.footer_section_inner}>
+	<div className={styles.container}>
+		<div className={styles.footer__section_holder}>
+			<div className={styles.footer__section_logo_holder}>
+				Spi<span className={styles.span_color}>za</span>
+			</div>
+			<div className={styles.grid}>
+				<div className={styles.grid_first_txt}>				
+						<h2 className={styles.grid_big_txt_custom}>Quick Links</h2>				
+						<div className={styles.grid_small_txt_custom}><a href=''>Shop</a></div>			
+						<div className={styles.grid_small_txt_custom}><a href=''>About us</a></div>			
+						<div className={styles.grid_small_txt_custom}><a href=''>Contact us</a></div>
+				</div>			
+			<div className={styles.grid_second_txt}>
+						<h2 className={styles.grid_big_txt_custom}>Help</h2>
+						<div className={styles.grid_small_txt_custom}><a href=''>FAQ</a></div>
+						<div className={styles.grid_small_txt_custom}><a href=''>Contact us</a></div>
+						<div className={styles.grid_small_txt_custom}><a href=''>Privacy policy</a></div>
+						<div className={styles.grid_small_txt_custom}><a href=''>Terms&conditions</a></div>
+				</div>
+				<div className={styles.grid_third_txt}>
+						<h2 className={styles.grid_big_txt_custom}>Contact Us</h2>
+						<div className={styles.grid_small_txt_custom}><a href=''>+385 21 080 080</a></div>
+						<div className={styles.grid_small_txt_custom}><a href=''>spiza@gmail.com</a></div>
+					<div className={styles.grid_footer_social}>
+							<div className={styles.grid_footer_logo_holder}>
+								<img className={`${styles.prsuto_img} ${styles.hover_socials}`} src="/facebook.svg" height='40px' width='40px'/> 
+							</div>
+							<div className={styles.grid_footer_logo_holder}>
+								<img className={`${styles.prsuto_img} ${styles.hover_socials}`} src="/instagram.svg" height='40px' width='40px'/> 
+							</div>
+							<div className={styles.grid_footer_logo_holder}>
+								<img className={`${styles.prsuto_img} ${styles.hover_socials}`} src="/youtube2.svg" height='40px' width='40px'/> 
+							</div>
+							<div className={styles.grid_footer_logo_holder}>
+								<img className={`${styles.prsuto_img} ${styles.hover_socials}`} src="/linkedin.svg" height='40px' width='40px'/> 
+							</div>				
+					</div>												
+				</div>		
+			</div>
+			<div className={`${styles.footer__section_logo_holder} ${styles.copyright}`}>
+				© 2022-2023 All rights reserved by J&M&M
+			</div>
+			</div>
+		</div>
+	</section>
+
+
+			{/* <div className="bg-black-50 h-1/2 w-full grid min-[900px]:grid-cols-4 md:grid-cols-2 min-[520px]:grid-cols-2 min-[520px]:text-left py-20 px-10 justify-center text-centar">
 				<div className="p-5 ">
 					<ul>
 						<p className="text-white-800 font-bold text-3xl pb-6">
@@ -78,7 +127,7 @@ const Footer = () => (
 				<h1 className=" text-white-800 font-semibold">
 					© 2022-2023 All rights reserved by Jakov, Mihael and Marino
 				</h1>
-			</div>
+			</div> */}
 		</>
 	);
 

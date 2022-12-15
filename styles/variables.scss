@@ -1,0 +1,8 @@
+$titleColor: rgb(0, 0, 0);
+$buttonColor: rgb(0, 0, 0);
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

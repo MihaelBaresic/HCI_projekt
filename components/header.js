@@ -22,7 +22,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import CTA from '../components/CTA.js';
+
 
 const drawerWidth = '80%';
 
@@ -55,13 +55,13 @@ const AppBar = styled(MuiAppBar, {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),  
-    backgroundColor: `rgb(0,0,0,0.5)`,
+    backgroundColor: `rgb(0,0,0,0.8)`,
    
   ...(open && {
     width: `100%`,
     
     marginRight: `0`,
-    backgroundColor: `rgb(0,0,0,0.5)`,
+    backgroundColor: `rgb(0,0,0,0.8)`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
@@ -101,14 +101,14 @@ export default function Home() {
       <AppBar position="fixed" open={open} sx={{ paddingLeft: '36px', paddingRight: '36px', height: '120px', justifyContent: 'center'}}>
         <Toolbar sx={{ justifyContent: 'space-between',}}>
           <Typography variant="h6" noWrap sx={{ flexGrow: 0}} component="div">
-            LOGO
+          <span className={styles.span_font_size}>Spi<span className={styles.span_color}>za</span></span>
           </Typography>
 
           <div id="myDIV">
-           <div class={styles.div_flex} >
-            <div class={styles.full_width}><a href="#" className={`${styles.underline_animation} "active"`}>Home</a></div>
-            <div class={styles.full_width}><a href="#" className={styles.underline_animation }>About</a></div>
-            <div class={styles.full_width}><a href="#" className={styles.underline_animation}>Event</a></div>
+           <div class={`${styles.div_flex} ${styles.navBar_desktop_holder}`} >
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><a href="#" className={`${styles.underline_animation}`}>Home</a></div>
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><a href="#" className={styles.underline_animation }>About</a></div>
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><a href="#" className={styles.underline_animation}>Event</a></div>
            </div>
           </div>
           {/* <div className={styles.navBar_desktop_holder}>
@@ -201,9 +201,9 @@ export default function Home() {
             </div>
             <div className={styles.intro_text_position}>
             <div className={styles.grid}>
-              <div className={styles.intro_text}>
-                <h2>Feel The Flavours Of Dalmatia</h2>
-                <p>Try the taste of Dalmatian spiza from our web shop. Guaranteed high quality of all products. See you.</p>
+              <div className={`${styles.intro_text}`}>
+                <h2 className={styles.titile_txt}>Feel The Flavours Of Dalmatia</h2>
+                <p className={styles.titile_paragraph_txt}>Try the taste of Dalmatian spiza from our web shop. Guaranteed high quality of all products. See you.</p>
                 <div className={`${styles.cta__full} ${styles.btn_header_pos}`}>FIND OUT MORE</div>
               </div>
               </div>

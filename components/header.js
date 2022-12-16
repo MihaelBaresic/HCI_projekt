@@ -140,9 +140,9 @@ export default function Home() {
       </AppBar>
       <Main open={open}>
         <DrawerHeader />
-        <Typography paragraph>
+        {/* <Typography paragraph>
           Lorem ipsum dolor sit amet
-        </Typography>
+        </Typography> */}
         
       </Main>
       <Drawer
@@ -192,7 +192,7 @@ export default function Home() {
       </Drawer>
     </Box>
 
-      <div className={styles.bg__holder}>
+      {/* <div className={styles.bg__holder}>
             <div className={styles.intro__bg}>
             <img className={styles.bg__image} src="/olive-sea.png" height='100%' width='100%'/>
             </div>
@@ -213,6 +213,7 @@ export default function Home() {
 
       </div>
 
+      <p className={styles.lay_href_color}><a href='./posts/first-post'>HREF TO LAYOUT PAGE</a></p> */}
 
 
     {/* <Layout home>

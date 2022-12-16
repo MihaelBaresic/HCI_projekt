@@ -1,18 +1,18 @@
 import CTA from '../components/CTA.js';
 import ScrollX from '../components/scrollsnap.js';
 import HeaderFooter from '../layouts/HeaderFooter.js';
-import Navbar from '../components/navbar.js';
+import Link from 'next/link';
 
-const Hello = () => {
+const About = () => {
     return (
         <>
             <HeaderFooter>
-                <CTA />
-                <ScrollX />
-                <Navbar />
+                
+             
+              <Link href="/home">← Back to home</Link>
             </HeaderFooter>
         </>
     );
 };
 
-export default Hello;
+export default About;

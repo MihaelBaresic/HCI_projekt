@@ -1,6 +1,6 @@
 import Header from '../components/header.js';
-
 import Footer from '../components/Footer.js';
+
 
 
 const HeaderFooter = ({ children, ...rest }) => {
@@ -8,6 +8,7 @@ const HeaderFooter = ({ children, ...rest }) => {
         <>
             <Header />
             <main {...rest}>{children}</main>
+            
             <Footer /> 
         </>
     );

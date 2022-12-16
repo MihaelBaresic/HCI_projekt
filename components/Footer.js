@@ -14,7 +14,7 @@ const Footer = () => (
 			</div>
 			<div className={styles.grid}>
 				<div className={styles.grid_first_txt}>				
-						<h2 className={styles.grid_big_txt_custom}>Quick Links</h2>				
+						<h2 className={styles.grid_big_txt_custom}>Links</h2>				
 						<div className={styles.grid_small_txt_custom}><a href=''>Shop</a></div>			
 						<div className={styles.grid_small_txt_custom}><a href=''>About us</a></div>			
 						<div className={styles.grid_small_txt_custom}><a href=''>Contact us</a></div>

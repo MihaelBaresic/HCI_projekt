@@ -237,7 +237,7 @@ export default function Home() {
     </Layout> */}
  
 
-      {/* <p className={styles.lay_href_color}><a href='./posts/first-post'>HREF TO LAYOUT PAGE</a></p>
+     {/* <p className={styles.lay_href_color}><a href='./posts/first-post'>HREF TO LAYOUT PAGE</a></p> */}
       
       {/* <Button variant="contained">Hello World</Button> */}
       

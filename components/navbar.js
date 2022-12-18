@@ -2,9 +2,10 @@ import styles from '../styles/Home.module.css'
 
 const Navbar = () => (
   <>
+  
 <div className={styles.bg__holder}>
             <div className={styles.intro__bg}>
-            <img className={styles.bg__image} src="/olive-sea.png" height='100%' width='100%'/>
+            <img className={`${styles.bg__image}`} src="/olive-sea.png" height='100%' width='100%'/>
             </div>
             <div className={styles.intro__olive}>
             <img className={styles.olive__image} src="/olive-black.svg" height='100%' width='100%'/>
@@ -18,12 +19,12 @@ const Navbar = () => (
               </div>
               </div>
             </div>
-          
+            </div>
        
 
-      </div>
+     
 
-      <p className={styles.lay_href_color}><a href='./posts/first-post'>HREF TO LAYOUT PAGE</a></p>
+      {/* <p className={styles.lay_href_color}><a href='./posts/first-post'>HREF TO LAYOUT PAGE</a></p> */}
   </>
 );
 

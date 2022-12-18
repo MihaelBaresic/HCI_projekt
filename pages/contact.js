@@ -1,15 +1,15 @@
-import HeaderFooter from '../layouts/HeaderFooter.js';
+import HeaderFooter2 from '../layouts/HeaderFooter2.js';
 import Link from 'next/link';
 import ContactUs from '../components/contactus.js';
 
 const Contact = () => {
     return (
         <>
-            <HeaderFooter>
+            <HeaderFooter2>
                 
              <ContactUs/>
-              <Link href="/home">← Back to home</Link>
-            </HeaderFooter>
+              {/* <Link href="/home">← Back to home</Link> */}
+            </HeaderFooter2>
         </>
     );
 };

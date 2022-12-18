@@ -26,6 +26,7 @@
 .bg__holder{
   max-width: 100vw;
 }
+/* bg__img_contact */
 .intro__bg{
   height: 100%;
   left: 0;
@@ -82,6 +83,11 @@
   width: 100%;
   object-fit: cover;
 }
+.bg__image2{
+  height: 110vh;
+  width: 100%;
+  object-fit: cover;
+}
 .olive__image{
   height: 200px;
   width: 200px;
@@ -108,6 +114,58 @@
 .intro_text_position{
   position: absolute;
   bottom: 60px;
+}
+.contact_text_position{
+  margin-top: 60px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+.contact_flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 1em;
+}
+.contact_font_title{
+  font-size: 60px;
+  color: white;
+}
+.contact_font__titles{
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+/* .bg__img_contact{ */
+  /* background-image: url(https://agrolaguna.hr/wp-content/uploads/2021/03/nasa-prica.jpg?id=1502) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; */
+
+    /* height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1; */
+/* } */
+.bg__image_contact{
+  z-index: -1;
+}
+.contact_align_center{
+  align-items: center;
+}
+.contact_flex2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(17,17,17,0.8);
+  color: white;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  padding-right: 10%;
 }
 .intro_text{
   position: relative;
@@ -386,5 +444,25 @@
     grid-column-end: 13;
   }
 }
-
-
+@media screen and (max-width: 800px){
+.contact_text_position{  
+  padding-left: 60px;
+  padding-right: 60px;
+}
+}
+@media screen and (max-width: 600px){
+  .contact_text_position{   
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  }
+@media screen and (max-width: 600px){
+  .bg__image2{   
+   height: 120vh;
+  }
+} 
+@media screen and (max-width: 500px){
+   .bg__image2{   
+   height: 140vh;
+  }
+}  

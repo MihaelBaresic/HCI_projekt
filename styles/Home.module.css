@@ -1,6 +1,6 @@
 .container {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .container_left{
   padding-left: 60px;
@@ -294,35 +294,51 @@
 .padding_li{
   padding-left: 20px;
 }
+
+/**/
+.container_new{
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+.container_new > div {
+  scroll-snap-align: start;
+}
 /* Footer section*/
 .footer_section_inner{
-  background-color: rgb(30, 29, 29);
+  background-color: rgb(0, 0, 0);
 }
 .footer__section_logo_holder{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 44px;
+  font-size: 12px;
   font-family: 'inherit';
   padding-top: 20px;
   color: white;
 }
+.moma{
+  padding-top: 126px;
+}
 .span_color{
   color: #2b46f2;
 }
-.grid_first_txt{
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
 .grid_big_txt_custom{
-  color: #8ba38d;
+  color: white;
   margin-bottom: 20px;
   letter-spacing: .105em;
-  text-transform: uppercase;
+  font-size: 20px;
+}
+.grid_big_txt_custom_1{
+  color: white;
+  margin-top: 6px;
+  margin-bottom: 46px;
+  letter-spacing: .105em;
+  font-size: 40px;
 }
 .grid_small_txt_custom{
-  color: #8ba38d;
-  font-size: 20px;
+  color: white;
+  font-size: 16px;
   margin-bottom: 10px;
   font-family: "Merriweather",serif;
 }
@@ -330,13 +346,54 @@
   transition: .3s;
   color: #2b46f2;
 }
+.grid_first_txt{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 .grid_second_txt{
-  grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  font-size: 16px;
 }
 .grid_third_txt{
-  grid-column-start: 5;
+  grid-column-start: 6;
+  grid-column-end: 8;
+}
+.grid_fourth_txt{
+  grid-column-start: 8;
   grid-column-end: 13;
+}
+.input__holder{
+  display: flex;
+  height: 43px;
+  margin-top: 25px;
+}
+.input__style{
+  padding: 0 10px;
+  border-radius: 20px;
+  border: none;
+  width: 246px;
+  outline: none;
+}
+.sub__btn__footer{
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .13em;
+  line-height: 12px;
+  padding: 14px 30px;
+  transition: background-color .35s ease,color .35s ease;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 16px;
 }
 .grid_footer_social{
   display: flex;
@@ -348,13 +405,13 @@
 }
 .hover_socials:hover{
   transition: .3s;
-  opacity: .1;
+  opacity: .5;
 }
 .copyright{
   color: #ffffff;
-  padding-top: 20px;
+  padding-top: 96px;
   padding-bottom: 20px;
-  font-size: 15px;
+  font-size: 12px;
   letter-spacing: .1rem;
 }
 .span_font_size{
@@ -466,3 +523,71 @@
    height: 140vh;
   }
 }  
+@media screen and (max-width: 1120px){
+  .grid_second_txt{
+    grid-column-start: 5;
+    grid-column-end: 8;
+  }
+  .grid_third_txt{
+    grid-column-start: 8;
+    grid-column-end: 13;
+  }
+  .grid_fourth_txt{
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+} 
+@media screen and (max-width: 960px){
+  .grid_second_txt{
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+  .grid_third_txt{
+    grid-column-start: 9;
+    grid-column-end: 13;
+  }
+} 
+@media screen and (max-width: 740px){
+  .grid_second_txt{
+    grid-column-start: 8;
+    grid-column-end: 13;
+  }
+  .grid_third_txt{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .grid_fourth_txt{
+    grid-column-start: 5;
+    grid-column-end: 13;
+  }
+} 
+@media screen and (max-width: 560px){
+  .grid_second_txt{
+    margin-top: 30px;
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  .grid_third_txt{
+    margin-top: 30px;
+    grid-column-start: 6;
+    grid-column-end: 13;
+  }
+  .grid_fourth_txt{
+    margin-top: 40px;
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+  .input__holder{
+    flex-direction: column;
+  }
+  .input__style{
+    padding: 14px;
+  }
+  .sub__btn__footer{
+    margin-top: 40px;
+    margin-left: 0px;
+  }
+  .copyright{
+    margin-top: 80px;
+  }
+} 

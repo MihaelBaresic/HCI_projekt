@@ -44,7 +44,8 @@ const Login = () => {
                 </h1>
                 {!token && (
                     <section className={styles.form}>
-                        <div className={styles.inputWrapper}>
+                        <span>E-mail</span>
+                        <div className={styles.inputWrapper}>                            
                             <input
                                 value={email}
                                 type="email"
@@ -54,6 +55,7 @@ const Login = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
+                        <span>Password</span>
                         <div className={styles.inputWrapper}>
                             <input
                                 value={password}

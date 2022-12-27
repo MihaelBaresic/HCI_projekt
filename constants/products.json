@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Olive oil",
+    "imageUrl": "olive1.svg",
+    "price": 9.99,
+    "type": "ulje"
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "imageUrl": "olive1.svg",
+    "price": 19.99
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "imageUrl": "olive1.svg",
+    "price": 29.99
+    },
+    {
+    "id": 4,
+    "name": "Product 4",
+    "imageUrl": "olive1.svg",
+    "price": 39.99
+    },
+    {
+    "id": 5,
+    "name": "Product 5",
+    "imageUrl": "olive1.svg",
+    "price": 49.99
+    },
+    {
+    "id": 6,
+    "name": "Product 6",
+    "imageUrl": "olive1.svg",
+    "price": 59.99
+    },
+    {
+    "id": 7,
+    "name": "Product 7",
+    "imageUrl": "olive1.svg",
+    "price": 69.99
+    }
+]
+  

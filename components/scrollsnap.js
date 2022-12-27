@@ -46,15 +46,25 @@ const styles = css`
   }
   .object_price{
     color: #666666;
-    Font family: ABeeZee
-    Font style: Regular
-    Font size: 16px
-    Line height: 20px
-    Line height: 125%
-    Align: Left
-    Vertical align: Top
+    Font family: ABeeZee;
+    Font style: Regular;
+    font-size: 18px;
+    Line height: 20px;
+    Line height: 125%;
+    Align: Left;
+    Vertical align: Top;
   }
-
+  .btn__custom{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 24px;
+  }
+  @media screen and (max-width: 500px){
+    .container{
+      padding-left: 30px; 
+    }
+  }
 `
 
 function MyComponent() {
@@ -76,12 +86,12 @@ function MyComponent() {
   return (
     <div className="container">
     <style jsx>{styles}</style>
-    <div>
-      <IconButton sx={{backgroundColor:'white', boxShadow:'5px 4px 30px 10px rgb(0 0 0 / 10%)'}} onClick={() => handleClick('prev')}>
-        <ChevronLeftIcon />
+    <div className="btn__custom">
+      <IconButton sx={{backgroundColor:'white', boxShadow:'5px 4px 30px 10px rgb(0 0 0 / 20%)', height:'60px', width:'60px'}} onClick={() => handleClick('prev')}>
+        <ChevronLeftIcon fontSize='large' />
       </IconButton>
-      <IconButton sx={{backgroundColor:'white',marginLeft:'5px', boxShadow:'5px 4px 30px 10px rgb(0 0 0 / 10%)'}} onClick={() => handleClick('next')}>
-        <ChevronRightIcon />
+      <IconButton sx={{backgroundColor:'white',marginLeft:'5px', boxShadow:'5px 4px 30px 10px rgb(0 0 0 / 20%)', height:'60px', width:'60px'}} onClick={() => handleClick('next')}>
+        <ChevronRightIcon fontSize='large' />
       </IconButton>
     </div> 
     <div className="container_new" ref={containerRef}>  

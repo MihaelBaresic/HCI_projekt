@@ -1,0 +1,43 @@
+.cta__full3{
+  position: relative;
+  z-index: 2;
+  padding: 6px 50px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: .13em;
+  border-radius: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: max-content;
+  cursor: pointer;
+  background-color: #000000;
+  transition: opacity .35s ease;
+  color: #fff;
+  border: 1px solid #000000;
+  transition: .3s;
+}
+.cta__full3:hover{
+  background-color: #292929;
+  border: 1px solid #292929;
+}
+.shop_grid_holder{
+  grid-column: span 4;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 30px;
+}
+@media screen and (max-width: 800px){
+  .grid{
+    column-gap: 21px;
+  }
+}
+@media screen and (max-width: 500px){
+  .grid{
+    column-gap: 16px;
+  }
+}

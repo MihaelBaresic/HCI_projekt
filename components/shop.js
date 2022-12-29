@@ -1,52 +1,72 @@
-import { useContext } from "react";
-import ShoppingCartContext from "./Cart/ShoppingCartContext";
-import products from "../constants/products.json";
-import styles from '../styles/shop.module.css'
-import addToCart from './Cart/ShoppingCartContext'
+import { useContext, useEffect, useState } from 'react';
+import {useShoppingCart} from './ShoppingCartContext';
+import products from '../constants/products.json';
+import cart from '../constants/cart.json';
 
-function ProductList() {
-const contextValue = useContext(ShoppingCartContext);
-const cart = useContext(ShoppingCartContext);
+const Shop = () => {
+  const {setCart, setCartProducts, cart} = useShoppingCart()
+  const [isLoading, setIsLoading] = useState(true)
+  const [products, setProducts] = useState([])
 
 
-  return (    
-    <div className={styles.grid}>
-    {products.map((product) => (
-    <div className={styles.shop_grid_holder}>
+  // console.log({temp})
+
+  useEffect(() => {
+    // Load products from a local file
+    const loadProducts =  () => {
+      try {
+        const products = require('../constants/products.json');
+        setTimeout(() => {
+          setProducts(products);
+          setIsLoading(false);
+          console.log(products);
+        }, 1500)
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    loadProducts();
+  }, [setProducts]);
+
+  const addToCart = (productId, setCart) => {
+    // Check if the product is already in the cart
+    const product = cart.find((p) => p.id === productId);
+    if (product) {
+      // If the product is already in the cart, increase its quantity
+      const updatedCart = cart.map((p) => {
+        if (p.id === productId) {
+          p.quantity++;
+        }
+        return p;
+      });
+      setCart(updatedCart);
+    } else {
+      // If the product is not in the cart, add it to the cart
+      const productToAdd = products.find((p) => p.id === productId);
+      productToAdd.quantity = 1;
+      setCart([...cart, productToAdd]);
+    }
+  };
+  if (isLoading) {
+    return <p>Loading products...</p>;
+  }
+  
+  console.log({cart});
+
+  return (
+    <div>
+      <h1>Shop</h1>
+      {products.map((product) => (
         <div key={product.id}>
           <h2>{product.name}</h2>
-          <img src={product.imageUrl} alt={product.name} width='100%'/>
-          <p>Price: €{product.price}</p>
-          <button className={styles.cta__full3} onClick={() => addToCart(product)}>Add to cart</button>
+          <img src={product.imageUrl} alt={product.name} />
+          <p>${product.price.toFixed(2)}</p>
+          <button onClick={() => addToCart(product.id, setCart)}>Add to Cart</button>
         </div>
-        </div>
-))}
-</div>
-);
-}
+      ))}
+    </div>
+  );
+};
 
-export default ProductList;
-
-
-// import React, { useContext } from 'react';
-// import { ShoppingCartContext } from './Cart/ShoppingCartContext';
-// import mockProducts from "../constants/mockProducts";
-
-// function ProductList() {
-//   let {cart, addToCart} = useContext(ShoppingCartContext);
-
-//   return (
-//     <div>
-//       {mockProducts.map(product => (
-//         <div key={product.id}>
-//           <h2>{product.name}</h2>
-//           <img src={product.imageUrl} alt={product.name} />
-//           <p>{product.price}</p>
-//           <button onClick={() => addToCart(product)}>Add to Cart</button>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default ProductList;
+export default Shop;

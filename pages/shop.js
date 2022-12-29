@@ -1,18 +1,17 @@
-import ProductList from '../components/shop.js';
 import HeaderFooter2 from '../layouts/HeaderFooter2.js';
-import ShoppingCartContextProvider from '../components/Cart/ShoppingCartContext';
+import { useState } from 'react';
+import {ShoppingCartProvider} from '../components/ShoppingCartContext.js';
+import Shop from '../components/shop.js';
 
+const App = () => {
 
-const Shop = () => {
-    return (
-        <>
-            <HeaderFooter2>
-                <ShoppingCartContextProvider>
-                    <ProductList/>
-                </ShoppingCartContextProvider>    
-            </HeaderFooter2>
-        </>
-    );
+  return (
+    <ShoppingCartProvider>
+    <HeaderFooter2>
+      <Shop />
+    </HeaderFooter2>
+    </ShoppingCartProvider>
+  );
 };
 
-export default Shop;
+export default App;

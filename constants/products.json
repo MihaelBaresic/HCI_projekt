@@ -1,45 +1,153 @@
 [
   {
     "id": 1,
-    "name": "Olive oil",
-    "imageUrl": "olive1.svg",
+    "name": "Jure",
+    "imageUrl": "jure.webp",
     "price": 9.99
   },
   {
     "id": 2,
-    "name": "Product 2",
-    "imageUrl": "olive1.svg",
+    "name": "Jakov",
+    "imageUrl": "jakov.webp",
     "price": 19.99
   },
   {
     "id": 3,
-    "name": "Product 3",
-    "imageUrl": "olive1.svg",
+    "name": "Plavac mali",
+    "imageUrl": "plavac.webp",
     "price": 29.99
     },
     {
     "id": 4,
-    "name": "Product 4",
-    "imageUrl": "olive1.svg",
+    "name": "Plavac veliki",
+    "imageUrl": "zlatan.webp",
     "price": 39.99
     },
     {
     "id": 5,
-    "name": "Product 5",
-    "imageUrl": "olive1.svg",
+    "name": "Grabovac",
+    "imageUrl": "grabovac.webp",
     "price": 49.99
     },
     {
     "id": 6,
-    "name": "Product 6",
-    "imageUrl": "olive1.svg",
+    "name": "Pelinkovac",
+    "imageUrl": "pelin.webp",
     "price": 59.99
     },
     {
     "id": 7,
-    "name": "Product 7",
-    "imageUrl": "olive1.svg",
+    "name": "Loza",
+    "imageUrl": "loza.webp",
     "price": 69.99
-    }
+    },
+    {
+    "id": 8,
+    "name": "Maraschino",
+    "imageUrl": "maraskino.webp",
+    "price": 59.99
+    },
+    {
+    "id": 9,
+    "name": "Travarica",
+    "imageUrl": "travarica.webp",
+    "price": 59.99
+    },
+  {
+    "id": 10,
+    "name": "Cvjetni",
+    "imageUrl": "med1.webp",
+    "price": 59.99
+    },
+  {
+    "id": 11,
+    "name": "Dalmatinski",
+    "imageUrl": "med2.webp",
+    "price": 59.99
+    },
+    {
+      "id": 12,
+      "name": "Pro-bio",
+      "imageUrl": "med3.webp",
+      "price": 59.99
+      },
+      {
+    "id": 13,
+    "name": "Prsut",
+    "imageUrl": "prsut2.webp",
+    "price": 59.99
+  },
+  {
+  "id": 14,
+  "name": "Panceta",
+  "imageUrl": "panceta.webp",
+  "price": 59.99
+  },
+  {
+  "id": 15,
+  "name": "Pecenica",
+  "imageUrl": "pecenica.webp",
+  "price": 59.99
+  },
+  {
+  "id": 16,
+  "name": "Zigljen",
+  "imageUrl": "zigljen.webp",
+  "price": 59.99
+  },
+  {
+  "id": 17,
+  "name": "Dinarski",
+  "imageUrl": "dinarski.webp",
+  "price": 59.99
+  },
+  {
+  "id": 18,
+  "name": "Paski",
+  "imageUrl": "paski.webp",
+  "price": 59.99
+  },
+  {
+  "id": 19,
+  "name": "Bademi",
+  "imageUrl": "bajami.webp",
+  "price": 59.99
+  },
+  {
+  "id": 20,
+  "name": "Smokve",
+  "imageUrl": "smokva.webp",
+  "price": 59.99
+  },
+  {
+  "id": 21,
+  "name": "Narancari",
+  "imageUrl": "naranca.webp",
+  "price": 59.99
+},
+{
+"id": 22,
+"name": "Stonska sol",
+"imageUrl": "sol.webp",
+"price": 59.99
+},
+{
+"id": 23,
+"name": "Imotska torta",
+"imageUrl": "torta.webp",
+"price": 59.99
+},
+{
+"id": 24,
+"name": "Rafioli",
+"imageUrl": "rafiole.webp",
+"price": 59.99
+},
+{
+"id": 25,
+"name": "Fritule",
+"imageUrl": "fritule.webp",
+"price": 59.99
+}
 ]
   

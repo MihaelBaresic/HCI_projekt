@@ -1,9 +1,9 @@
 import { useContext, useState, useEffect } from 'react';
-import ShoppingCartContext from './ShoppingCartContext';
-import cart from '../constants/cart.json';
+import {useShoppingCart} from './ShoppingCartContext';
 
 const Cart = () => {
-  const {setCart, cart} = useContext(ShoppingCartContext);
+  const {setCart, cart} = useShoppingCart()
+  // const {setCart, cart} = useContext(ShoppingCartContext);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -14,6 +14,27 @@ const Cart = () => {
   const removeProduct = (productId) => {
     const updatedCart = cart.filter((p) => p.id !== productId);
     setCart(updatedCart);
+  };
+
+  const decreaseQuantity = (productId) => {
+    // Check if the product is already in the cart
+    const product = cart.find((p) => p.id === productId);
+    if (product) {
+      // If the product is in the cart and has a quantity greater than 1, decrease its quantity
+      if (product.quantity > 1) {
+        const updatedCart = cart.map((p) => {
+          if (p.id === productId) {
+            p.quantity--;
+          }
+          return p;
+        });
+        setCart(updatedCart);
+      } else {
+        // If the product is in the cart and has a quantity of 1, remove it from the cart
+        const updatedCart = cart.filter((p) => p.id !== productId);
+        setCart(updatedCart);
+      }
+    }
   };
 
   const increaseQuantity = (productId) => {

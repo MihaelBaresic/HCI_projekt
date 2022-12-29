@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import {useShoppingCart} from './ShoppingCartContext';
-import products from '../constants/products.json';
-import cart from '../constants/cart.json';
+import Spinner from './Spinner';
+import styles from '../styles/shop.module.css';
 
 const Shop = () => {
   const {setCart, setCartProducts, cart} = useShoppingCart()
@@ -49,7 +49,7 @@ const Shop = () => {
     }
   };
   if (isLoading) {
-    return <p>Loading products...</p>;
+    return <p>Loading products <Spinner /></p>;
   }
   
   console.log({cart});

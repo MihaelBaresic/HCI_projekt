@@ -6,11 +6,9 @@ import {ShoppingCartProvider} from '../components/ShoppingCartContext.js';
 const ShopCart = () => {
     return (
         <>
-        <ShoppingCartProvider>
             <HeaderFooter2>
                 <Cart/>
             </HeaderFooter2>
-        </ShoppingCartProvider>
         </>
     );
 };

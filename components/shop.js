@@ -55,16 +55,31 @@ const Shop = () => {
   console.log({cart});
 
   return (
-    <div>
-      <h1>Shop</h1>
+    
+    <div className={styles.container}>
+      <h1 className={styles.shop_h1}>Shop</h1>
+      <div className={styles.grid}>    
       {products.map((product) => (
-        <div key={product.id}>
-          <h2>{product.name}</h2>
-          <img src={product.imageUrl} alt={product.name} />
-          <p>${product.price.toFixed(2)}</p>
-          <button onClick={() => addToCart(product.id, setCart)}>Add to Cart</button>
+        <div className={styles.shop_grid_holder}>
+          <div className={styles.shop_element_holder}>
+            <div key={product.id} className={styles.shop_box}>              
+              <div className={styles.shop_img_holder}>
+                <div className={styles.shop_img_picture}>
+                  <img src={product.imageUrl} alt={product.name}  width='100%'/>
+                </div>
+              </div>
+              <div className={styles.shop_element_txt}>
+                <h3 className={styles.h3_shop}>{product.name}</h3>
+                <p>${product.price.toFixed(2)}</p>
+              </div>
+              <div className={styles.shop_element_btn}>
+                <button className={styles.cta__full3} onClick={() => addToCart(product.id, setCart)}>Add to Cart</button>
+              </div>
+            </div>
+          </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };

@@ -1,51 +1,78 @@
 import { useContext, useState, useEffect } from 'react';
 import {useShoppingCart} from './ShoppingCartContext';
 
+// [
+//   {
+//     "id": 1,
+//     "name": "Product 1",
+//     "price": 9.99,
+//     "quantity": 1
+//   },
+//   {
+//     "id": 2,
+//     "name": "Product 2",
+//     "price": 19.99,
+//     "quantity": 2
+//   }
+// ]
+
+
 const Cart = () => {
   const {setCart, cart} = useShoppingCart()
-  // const {setCart, cart} = useContext(ShoppingCartContext);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const total = cart.reduce((acc, p) => acc + p.price * p.quantity, 0);
+    const total = Object.keys(cart).reduce((acc, p) => acc + cart[p].price * cart[p].quantity, 0);
     setTotal(total);
   }, [cart]);
 
   const removeProduct = (productId) => {
-    const updatedCart = cart.filter((p) => p.id !== productId);
-    setCart(updatedCart);
+    setCart(previousState => {
+      delete previousState[productId];
+
+      return {
+        ...previousState
+      }
+    });
   };
 
   const decreaseQuantity = (productId) => {
     // Check if the product is already in the cart
-    const product = cart.find((p) => p.id === productId);
-    if (product) {
-      // If the product is in the cart and has a quantity greater than 1, decrease its quantity
-      if (product.quantity > 1) {
-        const updatedCart = cart.map((p) => {
-          if (p.id === productId) {
-            p.quantity--;
-          }
-          return p;
-        });
-        setCart(updatedCart);
-      } else {
-        // If the product is in the cart and has a quantity of 1, remove it from the cart
-        const updatedCart = cart.filter((p) => p.id !== productId);
-        setCart(updatedCart);
-      }
+    const productCartEntry = cart[productId];
+    if (!productCartEntry) {
+      return;
+    }
+
+    // If the product is in the cart and has a quantity greater than 1, decrease its quantity
+    if(productCartEntry.quantity > 1) {
+      productCartEntry.quantity--;
+      setCart(previousState => ({
+        ...previousState,
+        [productId]: productCartEntry,
+      }));
+    } else {
+      removeProduct(productId);
     }
   };
 
   const increaseQuantity = (productId) => {
-    const updatedCart = cart.map((p) => {
-      if (p.id === productId) {
-        p.quantity++;
-      }
-      return p;
-    });
-    setCart(updatedCart);
+  // Check if the product is already in the cart
+    const productCartEntry = cart[productId];
+    if (!productCartEntry) {
+      return;
+    }
+    // If the product is in the cart and has a quantity greater than 1, decrease its quantity
+      productCartEntry.quantity++;
+      setCart(previousState => ({
+        ...previousState,
+        [productId]: productCartEntry,
+      }));
   };
+
+  if(Object.keys(cart).length === 0) {
+    return <p>Your cart is empty!</p>;
+  }
+
 
   return (
     <div>
@@ -61,9 +88,12 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          {cart.map((product) => (
-            <tr key={product.id}>
-              <td>{product.name}</td>
+          {Object.keys(cart).map((productId) => {
+            const product = cart[productId];
+            
+            return(
+            <tr key={productId}>
+              <td>{product.name} <img src={product.imageUrl} alt={product.name}  width='10%' height='10%'/></td>
               <td>
                 <button onClick={() => increaseQuantity(product.id)}>+</button>
                 {product.quantity}
@@ -75,7 +105,7 @@ const Cart = () => {
                 <button onClick={() => removeProduct(product.id)}>Remove</button>
               </td>
             </tr>
-          ))}
+          )})}
           <tr>
             <td colSpan="4">Total: ${total.toFixed(2)}</td>
           </tr>

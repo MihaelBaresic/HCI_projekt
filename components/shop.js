@@ -1,16 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
 import {useShoppingCart} from './ShoppingCartContext';
-import products from '../constants/products.json';
-import cart from '../constants/cart.json';
+import Spinner from './Spinner';
 import styles from '../styles/shop.module.css';
 
 const Shop = () => {
-  const {setCart, setCartProducts, cart} = useShoppingCart()
+  const {setCart, cart} = useShoppingCart()
   const [isLoading, setIsLoading] = useState(true)
   const [products, setProducts] = useState([])
-
-
-  // console.log({temp})
 
   useEffect(() => {
     // Load products from a local file
@@ -21,7 +17,7 @@ const Shop = () => {
           setProducts(products);
           setIsLoading(false);
           console.log(products);
-        }, 1500)
+        }, 1000)
       } catch (error) {
         console.error(error);
       }
@@ -30,27 +26,35 @@ const Shop = () => {
     loadProducts();
   }, [setProducts]);
 
-  const addToCart = (productId, setCart) => {
+  const addToCart = (productId) => {
     // Check if the product is already in the cart
-    const product = cart.find((p) => p.id === productId);
-    if (product) {
+    // const { cart } = useShoppingCart();
+    const productIsInCart = !!cart[productId]
+    if (productIsInCart) {
       // If the product is already in the cart, increase its quantity
-      const updatedCart = cart.map((p) => {
-        if (p.id === productId) {
-          p.quantity++;
-        }
-        return p;
-      });
-      setCart(updatedCart);
+      return;
+      const productCartEntry = cart[productId];
+      productCartEntry.quantity += 1;
+      // Update the cart in the context
+      setCart(previousCart => ({
+        ...previousCart,
+        [productId]: productCartEntry
+      }));
     } else {
       // If the product is not in the cart, add it to the cart
       const productToAdd = products.find((p) => p.id === productId);
       productToAdd.quantity = 1;
-      setCart([...cart, productToAdd]);
+      // Update the cart in the context
+      setCart(previousCart => ({
+        ...previousCart,
+        [productId]: productToAdd
+      }));
     }
   };
+  
+
   if (isLoading) {
-    return <p>Loading products...</p>;
+    return <p>Loading products <Spinner /></p>;
   }
   
   console.log({cart});
@@ -74,7 +78,7 @@ const Shop = () => {
                 <p>${product.price.toFixed(2)}</p>
               </div>
               <div className={styles.shop_element_btn}>
-                <button className={styles.cta__full3} onClick={() => addToCart(product.id, setCart)}>Add to Cart</button>
+                <button className={styles.cta__full3} onClick={() => addToCart(product.id)}>Add to Cart</button>
               </div>
             </div>
           </div>

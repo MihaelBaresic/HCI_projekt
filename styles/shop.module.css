@@ -29,7 +29,7 @@
   border: 1px solid #292929;
 }
 .shop_grid_holder{
-  grid-column: span 4;
+  grid-column: span 3;
 }
 .shop_element_holder{
   box-shadow: 2px black;
@@ -123,4 +123,9 @@
   .cta__full3{
     padding: 6px 45px;
   }
+}
+/* ovo popravit */
+.spinner_loader_4jLIt{
+  margin: 5px;
+  vertical-align: middle;
 }

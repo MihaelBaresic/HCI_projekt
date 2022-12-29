@@ -76,10 +76,83 @@
   Line-height: 73%;
   text-align: Left;
 }
+.shop_bar_holder_holder{
+  /* display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; */
+  width: 100%;
+}
+.shop_bar_holder{
+  margin-bottom: 75px;
+  margin-top: 160px;
+  background-color: #F1F1F1;
+  border-radius: 5px;
+}
+.shop_bar_element{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 97px;
+}
+.shop_bar_btn{
+  margin-right: 15px;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  color: #B0976D;
+  cursor: pointer;
+}
+
+.shop_bar_btn:focus{
+  color: black;
+}
 .container{
   padding-left: 100px;
   padding-right: 100px;
 }
+.cart_bar, .cart_bar_2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cart_bar_2_1{
+  margin-left: 60px;
+}
+.veliko{
+  font-size: 80px;
+  color: rgb(7, 219, 3);
+}
+.table{
+  width: 100%;
+}
+.td, .th {
+ 
+  text-align: left;
+  padding: 8px;
+  width: 100%;
+}
+.tr{
+  border-bottom: 1px solid gray;
+}
+.td2{
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.btnssss{
+  color: blue;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+.cart_prod_pos{
+  padding-left: 44px;
+}
+
 .grid{
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));

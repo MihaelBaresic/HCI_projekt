@@ -22,7 +22,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-
+import Link from 'next/link'
+import {useShoppingCart} from './ShoppingCartContext';
 
 const drawerWidth = '80%';
 
@@ -80,7 +81,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-start',
 }));
 export default function Home() {
-  
+  const { cart } = useShoppingCart();
+  const numItemsInCart = Object.keys(cart).length;
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -106,23 +108,25 @@ export default function Home() {
 
           <div id="myDIV">
            <div class={`${styles.div_flex} ${styles.navBar_desktop_holder}`} >
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><a href="#" className={`${styles.underline_animation}`}>Home</a></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><a href="#" className={styles.underline_animation }>About</a></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><a href="#" className={styles.underline_animation}>Event</a></div>
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/home" legacyBehavior><a className={`${styles.underline_animation}`}>Home</a></Link></div>
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/shop" legacyBehavior><a className={`${styles.underline_animation}`}>Shop</a></Link></div>
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/blog" legacyBehavior><a className={`${styles.underline_animation}`}>Blog</a></Link></div>
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/contact" legacyBehavior><a className={`${styles.underline_animation}`}>Concat</a></Link></div>
            </div>
           </div>
-          {/* <div className={styles.navBar_desktop_holder}>
-          <div className={styles.navBar_desktop}>Home</div>
-          <div className={styles.navBar_desktop}>About us</div>
-          <div className={styles.navBar_desktop}>Shop</div>
-          </div> */}
+      
 
           <div className={styles.navBar_desktop_holder}>
           <div className={styles.navBar_desktop}>
-           <img className={styles.login_icon} src="/loginW.svg" height='100%' width='100%'/> 
+            <Link href="/login">
+            <img className={styles.login_icon} src="/loginW.svg" height='100%' width='100%'/>
+           </Link>
           </div>
           <div className={styles.navBar_desktop}>
-           <img className={styles.chart_icon} src="/chartW.svg" height='100%' width='100%'/> 
+          <Link href="/cart">
+           <img className={styles.chart_icon} src="/chartW.svg" height='100%' width='100%'/>
+           {numItemsInCart > 0 && <span className={styles.num_items}>{numItemsInCart}</span>}
+           </Link>
           </div>
           </div> 
           

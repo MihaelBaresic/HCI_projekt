@@ -3,8 +3,7 @@
     "id": 1,
     "name": "Olive oil",
     "imageUrl": "olive1.svg",
-    "price": 9.99,
-    "type": "ulje"
+    "price": 9.99
   },
   {
     "id": 2,

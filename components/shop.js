@@ -7,6 +7,7 @@ const Shop = () => {
   const {setCart, cart} = useShoppingCart()
   const [isLoading, setIsLoading] = useState(true)
   const [products, setProducts] = useState([])
+  const [selectedType, setSelectedType] = useState(null);
 
   useEffect(() => {
     // Load products from a local file
@@ -17,7 +18,7 @@ const Shop = () => {
           setProducts(products);
           setIsLoading(false);
           console.log(products);
-        }, 1000)
+        }, 500)
       } catch (error) {
         console.error(error);
       }
@@ -25,6 +26,10 @@ const Shop = () => {
 
     loadProducts();
   }, [setProducts]);
+
+  const handleTypeSelection = (type) => {
+    setSelectedType(type);
+  };
 
   const addToCart = (productId) => {
     // Check if the product is already in the cart
@@ -59,12 +64,32 @@ const Shop = () => {
   
   console.log({cart});
 
+  const filteredProducts = selectedType
+    ? products.filter((p) => p.type === selectedType)
+    : products;
+
+
   return (
     
     <div className={styles.container}>
       <h1 className={styles.shop_h1}>Shop</h1>
+      <div className={styles.shop_bar_holder_holder}>
+        <div className={styles.shop_bar_holder}>
+          <div className={styles.shop_bar_element}>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection(null)}>Show all</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('oliveOil')}>Olive Oil</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('wine')}>Wine</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('liquer')}>Liquers</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('cheese')}>Cheese</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('driedMeat')}>Dried meat</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('honey')}>Honey</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('cake')}>Cakes</button>
+            <button className={styles.shop_bar_btn} onClick={() => handleTypeSelection('other')}>Other</button>
+          </div>
+        </div>
+      </div>
       <div className={styles.grid}>    
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <div className={styles.shop_grid_holder}>
           <div className={styles.shop_element_holder}>
             <div key={product.id} className={styles.shop_box}>              

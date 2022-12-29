@@ -3,151 +3,197 @@
     "id": 1,
     "name": "Jure",
     "imageUrl": "jure.webp",
-    "price": 9.99
+    "price": 9.99,
+    "type": "wine"
   },
   {
     "id": 2,
     "name": "Jakov",
     "imageUrl": "jakov.webp",
-    "price": 19.99
+    "price": 19.99,
+    "type": "wine"
   },
   {
     "id": 3,
     "name": "Plavac mali",
     "imageUrl": "plavac.webp",
-    "price": 29.99
+    "price": 29.99,
+    "type": "wine"
     },
     {
     "id": 4,
     "name": "Plavac veliki",
     "imageUrl": "zlatan.webp",
-    "price": 39.99
+    "price": 39.99,
+    "type": "wine"
     },
     {
     "id": 5,
     "name": "Grabovac",
     "imageUrl": "grabovac.webp",
-    "price": 49.99
+    "price": 49.99,
+    "type": "wine"
     },
     {
     "id": 6,
     "name": "Pelinkovac",
     "imageUrl": "pelin.webp",
-    "price": 59.99
+    "price": 13.99,
+    "type": "liquer"
     },
     {
     "id": 7,
     "name": "Loza",
     "imageUrl": "loza.webp",
-    "price": 69.99
+    "price": 69.99,
+    "type": "liquer"
     },
     {
     "id": 8,
     "name": "Maraschino",
     "imageUrl": "maraskino.webp",
-    "price": 59.99
+    "price": 13.99,
+    "type": "liquer"
     },
     {
     "id": 9,
     "name": "Travarica",
     "imageUrl": "travarica.webp",
-    "price": 59.99
+    "price": 13.99,
+    "type": "liquer"
     },
   {
     "id": 10,
     "name": "Cvjetni",
     "imageUrl": "med1.webp",
-    "price": 59.99
+    "price": 59.99,
+    "type": "honey"
     },
   {
     "id": 11,
     "name": "Dalmatinski",
     "imageUrl": "med2.webp",
-    "price": 59.99
+    "price": 59.99,
+    "type": "honey"
     },
     {
       "id": 12,
       "name": "Pro-bio",
       "imageUrl": "med3.webp",
-      "price": 59.99
+      "price": 59.99,
+      "type": "honey"
       },
       {
     "id": 13,
     "name": "Prsut",
     "imageUrl": "prsut2.webp",
-    "price": 59.99
+    "price": 13.99,
+    "type": "driedMeat"
   },
   {
   "id": 14,
   "name": "Panceta",
   "imageUrl": "panceta.webp",
-  "price": 59.99
+  "price": 59.99,
+  "type": "driedMeat"
   },
   {
   "id": 15,
   "name": "Pecenica",
   "imageUrl": "pecenica.webp",
-  "price": 59.99
+  "price": 13.99,
+  "type": "driedMeat"
   },
   {
   "id": 16,
   "name": "Zigljen",
   "imageUrl": "zigljen.webp",
-  "price": 59.99
+  "price": 59.99,
+  "type": "cheese"
   },
   {
   "id": 17,
   "name": "Dinarski",
   "imageUrl": "dinarski.webp",
-  "price": 59.99
+  "price": 59.99,
+  "type": "cheese"
   },
   {
   "id": 18,
   "name": "Paski",
   "imageUrl": "paski.webp",
-  "price": 59.99
+  "price": 59.99,
+  "type": "cheese"
   },
   {
   "id": 19,
   "name": "Bademi",
   "imageUrl": "bajami.webp",
-  "price": 59.99
+  "price": 13.99,
+  "type": "other"
   },
   {
   "id": 20,
   "name": "Smokve",
   "imageUrl": "smokva.webp",
-  "price": 59.99
+  "price": 59.99,
+  "type": "other"
   },
   {
   "id": 21,
   "name": "Narancari",
   "imageUrl": "naranca.webp",
-  "price": 59.99
+  "price": 13.99,
+  "type": "other"
 },
 {
 "id": 22,
 "name": "Stonska sol",
 "imageUrl": "sol.webp",
-"price": 59.99
+"price": 59.99,
+"type": "other"
 },
 {
 "id": 23,
 "name": "Imotska torta",
 "imageUrl": "torta.webp",
-"price": 59.99
+"price": 59.99,
+"type": "cake"
 },
 {
 "id": 24,
 "name": "Rafioli",
 "imageUrl": "rafiole.webp",
-"price": 59.99
+"price": 59.99,
+"type": "cake"
 },
 {
 "id": 25,
 "name": "Fritule",
 "imageUrl": "fritule.webp",
-"price": 59.99
+"price": 13.99,
+"type": "cake"
+},
+{
+"id": 26,
+"name": "Brachia",
+"imageUrl": "brachia.webp",
+"price": 99.99,
+"type": "oliveOil"
+},
+{
+"id": 27,
+"name": "Atena Hvar",
+"imageUrl": "atena1.webp",
+"price": 59.99,
+"type": "oliveOil"
+},
+{
+"id": 28,
+"name": "Atena Origi",
+"imageUrl": "atena2.webp",
+"price": 69.99,
+"type": "oliveOil"
 }
 ]
   

@@ -475,6 +475,19 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 30px;
 }
+
+.num_items{
+  /* Style for the number of items in the cart */
+  display: inline-block;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 800px){
   .grid{
     column-gap: 21px;

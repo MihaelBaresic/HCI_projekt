@@ -1,5 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import {useShoppingCart} from './ShoppingCartContext';
+import styles from '../styles/shop.module.css';
+
 
 // [
 //   {
@@ -75,29 +77,58 @@ const Cart = () => {
 
 
   return (
-    <div>
-      <h1>Cart</h1>
-      <table>
+    <div className={styles.container}>
+      <h1 className={styles.shop_h1}>Cart</h1>
+      <table className={styles.table}>
+        {/* <thead align='left'> */}
         <thead>
-          <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th></th>
+          <tr className={styles.tr}>
+            <th className={`${styles.th} ${styles.cart_prod_pos}`}>Product</th>
+            <th className={styles.th}>Quantity</th>
+            <th className={styles.th}>Price</th>
+            <th className={styles.th}>Total</th>
           </tr>
         </thead>
-        <tbody>
+
+        {/* <div className={styles.cart_bar}>
+          <div className={styles.cart_bar_1}>
+            <div>
+              PRODUCTS
+            </div>
+          </div>
+          <div className={styles.cart_bar_2}>
+            <div className={styles.cart_bar_2_1}>UNIT PRICE</div>  
+            <div className={styles.cart_bar_2_1}>QTY</div>
+            <div className={styles.cart_bar_2_1}>PRICE</div>  
+          </div>
+        </div>
+
+        <div className={styles.cart_bar}>
+          <div className={styles.cart_bar_1}>
+            <div>
+            <img className={styles.svg_img} src="/jure.webp" height='160px' width='160px'/> 
+            </div>
+          </div>
+          <div className={styles.cart_bar_2}>
+            <div className={styles.cart_bar_2_1}>+      </div>  
+            <div className={styles.cart_bar_2_1}>$      </div>
+            <div className={styles.veliko}>-      NEDA MI SE VISE</div>  
+          </div>
+        </div> */}
+
+
+
+        <tbody >
           {Object.keys(cart).map((productId) => {
             const product = cart[productId];
             
             return(
-            <tr key={productId}>
-              <td>{product.name} <img src={product.imageUrl} alt={product.name}  width='10%' height='10%'/></td>
+            <tr key={productId} className={styles.tr}>
+              <td className={styles.td2} width='25%'><img src={product.imageUrl} alt={product.name}  width='150px' height='10%'/>{product.name} </td>
               <td>
-                <button onClick={() => increaseQuantity(product.id)}>+</button>
+                <button className={styles.btnssss} onClick={() => increaseQuantity(product.id)}>+</button>
                 {product.quantity}
-                <button onClick={() => decreaseQuantity(product.id)}>-</button>
+                <button className={styles.btnssss} onClick={() => decreaseQuantity(product.id)}>-</button>
               </td>
               <td>${product.price.toFixed(2)}</td>
               <td>${(product.price * product.quantity).toFixed(2)}</td>
@@ -107,9 +138,9 @@ const Cart = () => {
             </tr>
           )})}
           <tr>
-            <td colSpan="4">Total: ${total.toFixed(2)}</td>
+            <td colSpan="4" align='right'>Total: ${total.toFixed(2)}</td>
           </tr>
-        </tbody>
+        </tbody> 
       </table>
     </div>
   );

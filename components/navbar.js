@@ -19,8 +19,12 @@ const Navbar = () => (
                 <h2 className={styles.titile_txt}>Feel The Flavours Of Dalmatia</h2>
                 <p className={styles.titile_paragraph_txt}>Try the taste of Dalmatian spiza from our web shop. Guaranteed high quality of all products. See you.</p>
                 <div className={`${styles.cta__full} ${styles.btn_header_pos}`}>FIND OUT MORE</div>
-              </div>          
+              </div> 
+              {/* <div className={styles.image_desktop_home}>
+                <img className={`${styles.bg__image__mob}`} src="/olive_three.png" height='100%' width='100%'/> 
+              </div>    */}
               </div>
+             
             </div>
             </div>
        

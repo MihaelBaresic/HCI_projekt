@@ -111,7 +111,7 @@ export default function Home() {
             <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/home" legacyBehavior><a className={`${styles.underline_animation}`}>Home</a></Link></div>
             <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/shop" legacyBehavior><a className={`${styles.underline_animation}`}>Shop</a></Link></div>
             <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/blog" legacyBehavior><a className={`${styles.underline_animation}`}>Blog</a></Link></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/contact" legacyBehavior><a className={`${styles.underline_animation}`}>Concat</a></Link></div>
+            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/contact" legacyBehavior><a className={`${styles.underline_animation}`}>Contact</a></Link></div>
            </div>
           </div>
       

@@ -20,10 +20,10 @@ const SVG = () => (
     <div className={styles.SVG_txt_holder}>Quality guarantees</div>
     <div className={styles.flex_holder_svg}>
       <div className={styles.svg_img_holder}>
-        <img className={styles.svg_img} src="/euIzvornost.png" height='200px' width='200px'/> 
+        <img className={styles.svg_img} src="/euIzvornost.webp" height='200px' width='200px'/> 
       </div>
       <div className={styles.svg_img_holder}>
-        <img className={styles.svg_img} src="/zemljopisno_pod.png" height='200px' width='200px'/> 
+        <img className={styles.svg_img} src="/zemljopisno_pod.webp" height='200px' width='200px'/> 
       </div>
       <div className={styles.svg_img_holder}>
         <img className={styles.svg_img} src="/srednji.svg" height='200px' width='200px'/> 

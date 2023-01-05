@@ -18,7 +18,7 @@ const Shop = () => {
           setProducts(products);
           setIsLoading(false);
           console.log(products);
-        }, 500)
+        }, 1500)
       } catch (error) {
         console.error(error);
       }
@@ -59,7 +59,7 @@ const Shop = () => {
   
 
   if (isLoading) {
-    return <p>Loading products <Spinner /></p>;
+    return <p className={styles.loader_spinic}><div className={styles.loader_txt}></div> <Spinner /></p>;
   }
   
   console.log({cart});

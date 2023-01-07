@@ -8,7 +8,7 @@ const ContactUs = () => (
     </div>
 
   <div className={styles.contact_text_position}>
-    <p className={`${styles.contact_flex} ${styles.contact_font_title}`}><div>Get in touch</div></p> 
+    <p className={`${styles.contact_flex} ${styles.contact_font_title}`}>Get in touch</p> 
     <div className={`${styles.contact_flex} ${styles.contact_flex2}`}>
     <div className={`${styles.contact_font__titles} ${styles.contact_flex}`}>
       Company:SPIZA Internazionale d.o.o for food and beverage distribution, Split

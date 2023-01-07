@@ -149,31 +149,6 @@ function MyComponent() {
           </div>
         </Link>
       ))}
-    {/* <div className="intro__olive_holder">
-      <div className="intro__olive">      
-        <img className="olive__image" src="/olive-black.svg" width="360px;"/>
-      </div>    
-    </div>   
-    <div className="intro__olive_holder">
-      <div className="intro__olive">      
-        <img className="olive__image" src="/olive-black.svg" width="360px;"/>
-      </div>     
-    </div> 
-    <div className="intro__olive_holder">
-      <div className="intro__olive">      
-        <img className="olive__image" src="/olive-black.svg" width="360px;"/>
-      </div>   
-    </div> 
-    <div className="intro__olive_holder">
-      <div className="intro__olive">      
-        <img className="olive__image" src="/olive-black.svg" width="360px;"/>
-      </div>      
-    </div> 
-    <div className="intro__olive_holder">
-      <div className="intro__olive">      
-        <img className="olive__image" src="/olive-black.svg" width="360px;"/>
-      </div>    
-    </div>  */}
     </div>
     </div>
   )

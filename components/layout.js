@@ -19,18 +19,6 @@ export default function Layout({ children, home }) {
        
       </header>
       <main>
-        {/* <div className='bg-picture'>
-          <picture className='utilStyles.intro__bg'>
-            <Image
-              priority
-              src="/public/olive-sea.png"
-              className={utilStyles.bg_image}
-              height={100}
-              width={100}
-              alt=""
-            />
-          </picture>
-        </div> */}
         {children}
       </main>
     </div>

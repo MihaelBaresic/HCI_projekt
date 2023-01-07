@@ -748,6 +748,10 @@
   .shop_img_holdercina{
     grid-column: span 13;
   }
+  .intro_text{
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 }
 
 

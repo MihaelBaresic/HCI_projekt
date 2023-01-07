@@ -42,8 +42,8 @@ const CTA = () => (
         </div>
         </div>
         <div className={styles.grid_prsuto_text_holder_mobile}>
-        <h1>Provjerena domaća proizvodnja</h1>
-        <p>Mi brinemo da su naši proizvodi uzgajani i prešani na društveno i ekološki najodgovorniji način.</p>       
+        <h1 className={styles.titile_txt}>Verified domestic production</h1>
+        <p className={styles.titile_paragraph_txt}>We care that our products are grown and made in the most socially and ecologically responsible way.</p>       
         </div>    
       </div>
       </div>

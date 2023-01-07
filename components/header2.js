@@ -108,11 +108,11 @@ export default function Home() {
           </Typography>
 
           <div id="myDIV">
-           <div class={`${styles.div_flex} ${styles.navBar_desktop_holder}`} >
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/home" legacyBehavior><a className={`${styles.underline_animation}`}>Home</a></Link></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/shop" legacyBehavior><a className={`${styles.underline_animation}`}>Shop</a></Link></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/blog" legacyBehavior><a className={`${styles.underline_animation}`}>Blog</a></Link></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/contact" legacyBehavior><a className={`${styles.underline_animation}`}>Contact</a></Link></div>
+           <div className={`${styles.div_flex} ${styles.navBar_desktop_holder}`} >
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/home" legacyBehavior><a className={`${styles.underline_animation}`}>Home</a></Link></div>
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/shop" legacyBehavior><a className={`${styles.underline_animation}`}>Shop</a></Link></div>
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/blog" legacyBehavior><a className={`${styles.underline_animation}`}>Blog</a></Link></div>
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/contact" legacyBehavior><a className={`${styles.underline_animation}`}>Contact</a></Link></div>
            </div>
           </div>
       
@@ -170,25 +170,16 @@ export default function Home() {
         <List>
           {['Home', 'About us', 'Shop', 'Login', 'Chart'].map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <img className={styles.login_icon} src="/chart.svg" height='100%' width='100%'/>  : <img className={styles.login_icon} src="/login.svg" height='100%' width='100%'/> }
-                </ListItemIcon>
+              <ListItemButton>             
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>
           ))}
         </List>
-        <Divider />
-       
+        <Divider />       
       </Drawer>
-    </Box>
-
-      
+    </Box>     
     </div>
-
-
-  
     </>
   )
 }

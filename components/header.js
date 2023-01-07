@@ -107,11 +107,11 @@ export default function Home() {
           </Typography>
 
           <div id="myDIV">
-           <div class={`${styles.div_flex} ${styles.navBar_desktop_holder}`} >
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/home" legacyBehavior><a className={`${styles.underline_animation}`}>Home</a></Link></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/shop" legacyBehavior><a className={`${styles.underline_animation}`}>Shop</a></Link></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/blog" legacyBehavior><a className={`${styles.underline_animation}`}>Blog</a></Link></div>
-            <div class={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/contact" legacyBehavior><a className={`${styles.underline_animation}`}>Contact</a></Link></div>
+           <div className={`${styles.div_flex} ${styles.navBar_desktop_holder}`} >
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/home" legacyBehavior><a className={`${styles.underline_animation}`}>Home</a></Link></div>
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/shop" legacyBehavior><a className={`${styles.underline_animation}`}>Shop</a></Link></div>
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/blog" legacyBehavior><a className={`${styles.underline_animation}`}>Blog</a></Link></div>
+            <div className={`${styles.full_width} ${styles.navBar_desktop}`}><Link href="/contact" legacyBehavior><a className={`${styles.underline_animation}`}>Contact</a></Link></div>
            </div>
           </div>
       
@@ -144,9 +144,6 @@ export default function Home() {
       </AppBar>
       <Main open={open}>
         <DrawerHeader />
-        {/* <Typography paragraph>
-          Lorem ipsum dolor sit amet
-        </Typography> */}
         
       </Main>
       <Drawer
@@ -181,71 +178,10 @@ export default function Home() {
           ))}
         </List>
         <Divider />
-        {/* <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List> */}
+       
       </Drawer>
     </Box>
-
-      {/* <div className={styles.bg__holder}>
-            <div className={styles.intro__bg}>
-            <img className={styles.bg__image} src="/olive-sea.png" height='100%' width='100%'/>
-            </div>
-            <div className={styles.intro__olive}>
-            <img className={styles.olive__image} src="/olive-black.svg" height='100%' width='100%'/>
-            </div>
-            <div className={styles.intro_text_position}>
-            <div className={styles.grid}>
-              <div className={`${styles.intro_text}`}>
-                <h2 className={styles.titile_txt}>Feel The Flavours Of Dalmatia</h2>
-                <p className={styles.titile_paragraph_txt}>Try the taste of Dalmatian spiza from our web shop. Guaranteed high quality of all products. See you.</p>
-                <div className={`${styles.cta__full} ${styles.btn_header_pos}`}>FIND OUT MORE</div>
-              </div>
-              </div>
-            </div>
-          
-       
-
-      </div>
-
-      <p className={styles.lay_href_color}><a href='./posts/first-post'>HREF TO LAYOUT PAGE</a></p> */}
-
-
-    {/* <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section>
-        <p>Your Self Introduction</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-    </Layout> */}
- 
-
-      {/* <p className={styles.lay_href_color}><a href='./posts/first-post'>HREF TO LAYOUT PAGE</a></p>
-      
-      {/* <Button variant="contained">Hello World</Button> */}
-      
-{/* 
-      <footer className={styles.footer}>
-   
-      </footer> */}
     </div>
-
-
-    {/* <CTA /> */}
     </>
   )
 }

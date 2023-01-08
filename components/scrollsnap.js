@@ -107,7 +107,6 @@ function MyComponent() {
         setTimeout(() => {
           setPosts(posts);
           setIsLoading(false);
-          console.log(posts);
         }, 5)
       } catch (error) {
         console.error(error);

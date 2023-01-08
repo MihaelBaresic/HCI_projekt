@@ -97,7 +97,7 @@ const Shop = () => {
               </div>
               <div className={styles.shop_element_txt}>
                 <h3 className={styles.h3_shop}>{product.name}</h3>
-                <p>${product.price.toFixed(2)}</p>
+                <p>{product.price.toFixed(2)}€</p>
               </div>
               <div className={styles.shop_element_btn}>
                 <button className={styles.cta__full3} onClick={() => addToCart(product.id)}>Add to Cart</button>

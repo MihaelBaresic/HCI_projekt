@@ -5,7 +5,7 @@ const Navbar = () => (
   
 <div className={`${styles.bg__holder} `}>
             <div className={`${styles.intro__bg}  `}>
-            <img className={`${styles.bg__image}`} src="/intro_bg.png" height='100%' width='100%'/>           
+            <img className={`${styles.bg__image}`} src="/intro_bg2.png" height='100%' width='100%'/>           
             </div>
             {/* <div className={styles.intro__olive}>
             <img className={styles.olive__image} src="/olive-black.svg" height='100%' width='100%'/>

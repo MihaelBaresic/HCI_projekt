@@ -11,16 +11,16 @@ const ContactUs = () => (
     <p className={`${styles.contact_flex} ${styles.contact_font_title}`}>Get in touch</p> 
     <div className={`${styles.contact_flex} ${styles.contact_flex2}`}>
     <div className={`${styles.contact_font__titles} ${styles.contact_flex}`}>
-      Company:SPIZA Internazionale d.o.o for food and beverage distribution, Split
+      Company: SPIZA Internazionale d.o.o for food and beverage distribution, Split
     </div>
     <div className={`${styles.contact_font__titles} ${styles.contact_flex}`}>
-      Abbreviated name:SPIZA d.o.o 
+      Abbreviated name: SPIZA d.o.o 
     </div>
     <div className={`${styles.contact_font__titles} ${styles.contact_flex}`}>
-      Headquarters and address:Split, Ante Starčevića 34
+      Headquarters and address: Split, Ante Starčevića 34
     </div>
     <div className={`${styles.contact_font__titles} ${styles.contact_flex}`}>
-      Identification number:4050939
+      Identification number: 4050939
     </div>
     <div className={`${styles.contact_font__titles} ${styles.contact_flex}`}>
       Registry court: Commercial court in Pariz

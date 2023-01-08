@@ -74,6 +74,18 @@ const styles = css`
     Line height: 20px;
     Line height: 125%;
   }
+  .scrol_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    Font-family: 'BioRhyme';
+    Font-style: 'Regular';
+    Font-size: 36px;
+    Line-height: 56px;
+    Line-height: 100%;
+    Vertical-align: Top;
+    margin-bottom: 20px;
+  }
   @media screen and (max-width: 500px){
     .container{
       padding-left: 30px; 
@@ -129,6 +141,7 @@ function MyComponent() {
   return (
     <div className="container">
     <style jsx>{styles}</style>
+    <div className="scrol_title">Latest News</div>
     <div className="btn__custom">
       <IconButton sx={{backgroundColor:'white', boxShadow:'5px 4px 30px 10px rgb(0 0 0 / 20%)', height:'60px', width:'60px'}} onClick={() => handleClick('prev')}>
         <ChevronLeftIcon fontSize='large' />

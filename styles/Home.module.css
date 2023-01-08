@@ -13,7 +13,7 @@
   margin-left: 20px;
 }
 .hamburger_icon_responsive{
-  display: none;
+  display: none !important;
 }
 .navBar_desktop_holder{
   display: flex;
@@ -523,6 +523,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 25px 0px;
 }
 .loader_txt{
   margin-right: 10px;
@@ -549,7 +550,7 @@
 }
 @media screen and (max-width: 800px){
   .hamburger_icon_responsive{
-    display: block;
+    display: inline !important;
   }
 }
 @media screen and (max-width: 960px){

@@ -17,7 +17,6 @@ const Shop = () => {
         setTimeout(() => {
           setProducts(products);
           setIsLoading(false);
-          console.log(products);
         }, 1500)
       } catch (error) {
         console.error(error);
@@ -61,8 +60,6 @@ const Shop = () => {
   if (isLoading) {
     return <div className={styles.loader_spinic}><div className={styles.loader_txt}></div> <Spinner /></div>;
   }
-  
-  console.log({cart});
 
   const filteredProducts = selectedType
     ? products.filter((p) => p.type === selectedType)

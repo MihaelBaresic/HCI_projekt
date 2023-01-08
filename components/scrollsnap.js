@@ -107,7 +107,6 @@ function MyComponent() {
         setTimeout(() => {
           setPosts(posts);
           setIsLoading(false);
-          console.log(posts);
         }, 5)
       } catch (error) {
         console.error(error);
@@ -124,7 +123,7 @@ function MyComponent() {
   const selectedPosts = shuffledPosts.slice(0, 6);
 
   if (isLoading) {
-    return <p className={styles.loader_spinic}><div className={styles.loader_txt}></div> <Spinner /></p>;
+    return <div className={styles.loader_spinic}><div className={styles.loader_txt}></div> <Spinner /></div>;
   }
 
   return (

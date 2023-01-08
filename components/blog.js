@@ -15,7 +15,6 @@ const Blog = () => {
         setTimeout(() => {
           setPosts(posts);
           setIsLoading(false);
-          console.log(posts);
         }, 1500)
       } catch (error) {
         console.error(error);

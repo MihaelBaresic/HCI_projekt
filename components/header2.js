@@ -168,11 +168,13 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home', 'About us', 'Shop', 'Login', 'Chart'].map((text, index) => (
+          {['Home', 'Shop', 'Blog', 'Contact', 'Login', 'Cart'].map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>             
+              <Link href={`/${text.toLowerCase()}`}> 
+              <ListItemButton>
                 <ListItemText primary={text} />
               </ListItemButton>
+              </Link>
             </ListItem>
           ))}
         </List>

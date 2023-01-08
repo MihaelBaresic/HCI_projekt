@@ -166,14 +166,16 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home', 'About us', 'Shop', 'Login', 'Chart'].map((text, index) => (
+          {['Home', 'Shop', 'Blog', 'Contact', 'Login', 'Cart'].map((text, index) => (
             <ListItem key={text} disablePadding>
+              <Link href={`/${text.toLowerCase()}`}> 
               <ListItemButton>
-                <ListItemIcon>
+                {/* <ListItemIcon>
                   {index % 2 === 0 ? <img className={styles.login_icon} src="/chart.svg" height='100%' width='100%'/>  : <img className={styles.login_icon} src="/login.svg" height='100%' width='100%'/> }
-                </ListItemIcon>
+                </ListItemIcon> */}
                 <ListItemText primary={text} />
               </ListItemButton>
+              </Link>
             </ListItem>
           ))}
         </List>

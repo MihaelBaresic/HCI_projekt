@@ -5,7 +5,7 @@ const Navbar = () => (
   
 <div className={`${styles.bg__holder} `}>
             <div className={`${styles.intro__bg}  `}>
-            <img className={`${styles.bg__image}`} src="/intro_bg2.png" height='100%' width='100%'/>           
+            <img className={`${styles.bg__image}`} src="/intro_bg2.png" height='400px' width='400px'/>           
             </div>
             {/* <div className={styles.intro__olive}>
             <img className={styles.olive__image} src="/olive-black.svg" height='100%' width='100%'/>
@@ -20,6 +20,9 @@ const Navbar = () => (
                 <p className={styles.titile_paragraph_txt}>Try the taste of Dalmatian spiza from our web shop. Guaranteed high quality of all products. See you.</p>
                 <div className={`${styles.cta__full} ${styles.btn_header_pos}`}>FIND OUT MORE</div>
               </div> 
+              {/* <div className={`${styles.intro_desktop_bg}`}>
+              <img className={`${styles.bg__image__mob}`} src="/intro_bg2.png"  width='100%'/> 
+              </div> */}
               {/* <div className={styles.image_desktop_home}>
                 <img className={`${styles.bg__image__mob}`} src="/olive_three.png" height='100%' width='100%'/> 
               </div>    */}

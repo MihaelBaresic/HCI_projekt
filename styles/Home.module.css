@@ -184,7 +184,7 @@
   margin-left: 100px;
 }
 .margin_txt_home_intro{
-  top: auto !important;
+  top: 0 !important;
 }
 .cta__full{
   position: relative;

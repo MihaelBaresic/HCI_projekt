@@ -32,7 +32,7 @@ const styles = css`
   .intro__olive{
     border-radius: 12px;
     box-shadow: 5px 4px 30px 10px rgb(0 0 0 / 10%);
-    height: 480px;
+    height: 490px;
     position: relative;
     margin-left: 20px;
   }
@@ -89,6 +89,12 @@ const styles = css`
   @media screen and (max-width: 500px){
     .container{
       padding-left: 30px; 
+    }
+    .container_new{
+      overflow-x: auto; 
+    }
+    .scrol_title{
+      margin-bottom: 50px;
     }
   }
 `

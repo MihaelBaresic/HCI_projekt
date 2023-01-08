@@ -183,10 +183,9 @@
   grid-column-end: 6;
   margin-left: 100px;
 }
-/* .margin_txt_home_intro{
-  margin-left: 100px;
-  margin-right: 100px;
-} */
+.margin_txt_home_intro{
+  top: auto !important;
+}
 .cta__full{
   position: relative;
   z-index: 2;
@@ -625,6 +624,10 @@
 @media screen and (max-width: 500px){
    .bg__image2{   
    height: 140vh;
+  }
+
+  .intro__bg{
+    box-shadow: 5px 4px 30px 10px rgb(0 0 0 / 25%);
   }
 }  
 @media screen and (max-width: 1120px){

@@ -175,6 +175,7 @@ export default function Home() {
                 <ListItemText primary={text} />
               </ListItemButton>
               </Link>
+              {text === "Cart" && numItemsInCart > 0 && <span className={styles.num_items}>{numItemsInCart}</span>}
             </ListItem>
           ))}
         </List>

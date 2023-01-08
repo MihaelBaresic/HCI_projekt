@@ -93,14 +93,14 @@
   {
   "id": 14,
   "name": "Panceta",
-  "imageUrl": "panceta.webp",
+  "imageUrl": "panceta2.jpg",
   "price": 59.99,
   "type": "driedMeat"
   },
   {
   "id": 15,
   "name": "Pecenica",
-  "imageUrl": "pecenica.webp",
+  "imageUrl": "pecenica2.jpg",
   "price": 13.99,
   "type": "driedMeat"
   },
@@ -163,7 +163,7 @@
 {
 "id": 24,
 "name": "Rafioli",
-"imageUrl": "rafiole.webp",
+"imageUrl": "rafiole2.webp",
 "price": 59.99,
 "type": "cake"
 },
@@ -183,8 +183,8 @@
 },
 {
 "id": 27,
-"name": "Atena Hvar",
-"imageUrl": "atena1.webp",
+"name": "Zvijezda",
+"imageUrl": "zvizda2.jpg",
 "price": 59.99,
 "type": "oliveOil"
 },

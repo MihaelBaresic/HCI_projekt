@@ -735,7 +735,8 @@
    .intro_mob_bg{
     display: block;
     position: absolute;
-    margin-top: 260px;
+    top: 0;
+    bottom: 0;
   }
   .intro_desktop_bg{
     display: none;

@@ -151,7 +151,7 @@
   display: none;
   grid-column-start: 1;
   grid-column-end: 13;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
 }
 .intro_desktop_bg{
   height: -webkit-fill-available;
@@ -183,10 +183,9 @@
   grid-column-end: 6;
   margin-left: 100px;
 }
-/* .margin_txt_home_intro{
-  margin-left: 100px;
-  margin-right: 100px;
-} */
+.intro_text_position{
+  top: auto !important;
+}
 .cta__full{
   position: relative;
   z-index: 2;
@@ -626,6 +625,10 @@
    .bg__image2{   
    height: 140vh;
   }
+
+  .intro__bg{
+    box-shadow: 5px 4px 30px 10px rgb(0 0 0 / 25%);
+  }
 }  
 @media screen and (max-width: 1120px){
   .grid_second_txt{
@@ -732,6 +735,8 @@
    .intro_mob_bg{
     display: block;
     position: absolute;
+    top: 14vh !important;
+    bottom: 0 !important;
   }
   .intro_desktop_bg{
     display: none;

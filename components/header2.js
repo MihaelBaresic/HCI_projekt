@@ -138,8 +138,9 @@ export default function Home() {
             edge="end"
             onClick={handleDrawerOpen}
             sx={{ ...(open && { display: 'none' }) }}
-          >
+          >          
             <MenuIcon />
+            {numItemsInCart > 0 && <span className={styles.num_items}>{numItemsInCart}</span>}
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -175,6 +176,7 @@ export default function Home() {
                 <ListItemText primary={text} />
               </ListItemButton>
               </Link>
+              {text === "Cart" && numItemsInCart > 0 && <span className={styles.num_items}>{numItemsInCart}</span>}
             </ListItem>
           ))}
         </List>

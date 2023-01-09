@@ -735,8 +735,8 @@
    .intro_mob_bg{
     display: block;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 10vh !important;
+    bottom: 0 !important;
   }
   .intro_desktop_bg{
     display: none;

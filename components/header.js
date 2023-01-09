@@ -139,6 +139,7 @@ export default function Home() {
             sx={{ ...(open && { display: 'none' }) }}
           >
             <MenuIcon />
+            {numItemsInCart > 0 && <span className={styles.num_items}>{numItemsInCart}</span>}
           </IconButton>
         </Toolbar>
       </AppBar>

@@ -151,7 +151,7 @@
   display: none;
   grid-column-start: 1;
   grid-column-end: 13;
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
 }
 .intro_desktop_bg{
   height: -webkit-fill-available;
@@ -183,8 +183,8 @@
   grid-column-end: 6;
   margin-left: 100px;
 }
-.margin_txt_home_intro{
-  top: 0 !important;
+.intro_text_position{
+  top: auto !important;
 }
 .cta__full{
   position: relative;
@@ -735,6 +735,7 @@
    .intro_mob_bg{
     display: block;
     position: absolute;
+    margin-top: 260px;
   }
   .intro_desktop_bg{
     display: none;
